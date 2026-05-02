@@ -1,25 +1,138 @@
-<h2 class="mb-4">👗 Ropa para mujer</h2>
-
-<div class="container">
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-
-    @for (item of ropaMujer; track item.id) {
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-
-          <div class="card-body text-center">
-            <h5 class="card-title">{{ item.name }}</h5>
-          </div>
-
-          <div class="card-footer">
-            <button class="btn btn-outline-primary w-100">
-              Ver producto
-            </button>
-          </div>
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ropa Mujer</title>
+  <link rel="stylesheet" href="ropa-mujer.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+ 
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="10" r="5" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+        <path d="M8 10 Q6 14 8 28 H24 Q26 14 24 10" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+        <path d="M8 10 Q12 16 16 14 Q20 16 24 10" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+      </svg>
+    </div>
+    <ul class="navbar-links">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#" class="active">Catálogo</a></li>
+      <li><a href="#">Carrito</a></li>
+    </ul>
+    <button class="btn-session">Iniciar sesión</button>
+  </nav>
+ 
+  <!-- HEADER -->
+  <header class="page-header">
+    <h1>Página Ropa mujer</h1>
+  </header>
+ 
+  <!-- PRODUCT GRID -->
+  <main class="container">
+    <div class="product-grid">
+ 
+      <!-- Producto 1 -->
+      <div class="product-card">
+        <div class="product-image">
+          <div class="dress-preview dress-rose"></div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Vestido rosa</h3>
+          <p class="product-sizes">Talla: XL, L, M, S</p>
+          <p class="product-price">Precio: 20.000</p>
         </div>
       </div>
-    }
-
-  </div>
-</div>
+ 
+      <!-- Producto 2 -->
+      <div class="product-card">
+        <div class="product-image">
+          <div class="dress-preview dress-black"></div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Vestido negro</h3>
+          <p class="product-sizes">Talla: XL, L, M, S</p>
+          <p class="product-price">Precio: 20.000</p>
+        </div>
+      </div>
+ 
+      <!-- Producto 3 -->
+      <div class="product-card">
+        <div class="product-image">
+          <div class="dress-preview dress-cream"></div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Blusa crema</h3>
+          <p class="product-sizes">Talla: XL, L, M, S</p>
+          <p class="product-price">Precio: 20.000</p>
+        </div>
+      </div>
+ 
+      <!-- Producto 4 -->
+      <div class="product-card">
+        <div class="product-image">
+          <div class="dress-preview dress-terracotta"></div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Blusa terracota</h3>
+          <p class="product-sizes">Talla: XL, L, M, S</p>
+          <p class="product-price">Precio: 20.000</p>
+        </div>
+      </div>
+ 
+      <!-- Producto 5 -->
+      <div class="product-card">
+        <div class="product-image">
+          <div class="dress-preview dress-mint"></div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Vestido menta</h3>
+          <p class="product-sizes">Talla: XL, L, M, S</p>
+          <p class="product-price">Precio: 20.000</p>
+        </div>
+      </div>
+ 
+      <!-- Producto 6 -->
+      <div class="product-card">
+        <div class="product-image">
+          <div class="dress-preview dress-lavender"></div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Blusa lavanda</h3>
+          <p class="product-sizes">Talla: XL, L, M, S</p>
+          <p class="product-price">Precio: 20.000</p>
+        </div>
+      </div>
+ 
+      <!-- Producto 7 -->
+      <div class="product-card">
+        <div class="product-image">
+          <div class="dress-preview dress-camel"></div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Vestido camel</h3>
+          <p class="product-sizes">Talla: XL, L, M, S</p>
+          <p class="product-price">Precio: 20.000</p>
+        </div>
+      </div>
+ 
+      <!-- Producto 8 -->
+      <div class="product-card">
+        <div class="product-image">
+          <div class="dress-preview dress-burgundy"></div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">Blusa borgoña</h3>
+          <p class="product-sizes">Talla: XL, L, M, S</p>
+          <p class="product-price">Precio: 20.000</p>
+        </div>
+      </div>
+ 
+    </div>
+  </main>
+ 
+</body>
+</html>
