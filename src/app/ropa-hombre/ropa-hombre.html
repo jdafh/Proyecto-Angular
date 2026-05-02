@@ -1,1 +1,25 @@
-<p>ropa-hombre works!</p>
+<h2 class="mb-4">👕 Ropa para hombre</h2>
+
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+
+    @for (item of RopaHombre; track item.id) {
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+
+          <div class="card-body text-center">
+            <h5 class="card-title">{{ item.name }}</h5>
+          </div>
+
+          <div class="card-footer">
+            <button class="btn btn-outline-primary w-100">
+              Ver producto
+            </button>
+          </div>
+
+        </div>
+      </div>
+    }
+
+  </div>
+</div>

@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './ropa-hombre.css',
 })
 export class RopaHombre {
-  hombre =[
+  RopaHombre =[
     {id: 1, name: 'Camisas'},
     {id: 2, name: 'Camisas Oversize'}, 
     {id: 3, name: 'Buzos'},
