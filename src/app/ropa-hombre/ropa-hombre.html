@@ -1,25 +1,38 @@
-<h2 class="mb-4">👕 Ropa para hombre</h2>
+<header class="page-header">
+  <h1>Página Camisas hombre</h1>
+</header>
 
-<div class="container">
-  <div class="row row-cols-1 row-cols-md-3 g-4">
+<main class="container">
+  <div class="product-grid">
 
     @for (item of RopaHombre; track item.id) {
-      <div class="col">
-        <div class="card h-100 shadow-sm">
+      <div class="product-card" (click)="verProducto(item.id)">
 
-          <div class="card-body text-center">
-            <h5 class="card-title">{{ item.name }}</h5>
-          </div>
-
-          <div class="card-footer">
-            <button class="btn btn-outline-primary w-100">
-              Ver producto
-            </button>
-          </div>
-
+        <div class="product-image">
+          <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" class="shirt-svg">
+            <!-- Cuerpo -->
+            <path d="M45 35 Q80 48 115 35 L138 70 L112 78 L112 138 L48 138 L48 78 L22 70 Z"
+                  [attr.fill]="item.color" stroke="rgba(0,0,0,0.08)" stroke-width="1.5"/>
+            <!-- Cuello -->
+            <path d="M45 35 Q62 28 80 32 Q98 28 115 35 Q98 55 80 52 Q62 55 45 35 Z"
+                  [attr.fill]="item.color" stroke="rgba(0,0,0,0.12)" stroke-width="1"/>
+            <!-- Sombra manga izquierda -->
+            <path d="M45 35 L22 70 L48 78 L48 55 Z" fill="rgba(0,0,0,0.08)"/>
+            <!-- Sombra manga derecha -->
+            <path d="M115 35 L138 70 L112 78 L112 55 Z" fill="rgba(0,0,0,0.08)"/>
+            <!-- Sombra cuerpo lateral -->
+            <path d="M112 78 L112 138 L100 138 L100 78 Z" fill="rgba(0,0,0,0.06)"/>
+          </svg>
         </div>
+
+        <div class="product-info">
+          <h3 class="product-name">{{ item.name }}</h3>
+          <p class="product-sizes">Talla: {{ item.tallas }}</p>
+          <p class="product-price">Precio: {{ item.precio }}</p>
+        </div>
+
       </div>
     }
 
   </div>
-</div>
+</main>
