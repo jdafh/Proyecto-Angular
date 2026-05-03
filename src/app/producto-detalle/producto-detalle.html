@@ -1,0 +1,99 @@
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-logo" (click)="volver()" style="cursor:pointer">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+      <circle cx="16" cy="10" r="5" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+      <path d="M8 10 Q6 14 8 28 H24 Q26 14 24 10" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+      <path d="M8 10 Q12 16 16 14 Q20 16 24 10" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+    </svg>
+  </div>
+  <ul class="navbar-links">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="#" class="active">Catálogo</a></li>
+    <li><a href="#">Carrito</a></li>
+  </ul>
+  <button class="btn-session">Iniciar sesión</button>
+</nav>
+ 
+<!-- DETALLE -->
+<div class="detalle-wrapper" *ngIf="producto; else notFound">
+  <div class="detalle-layout">
+ 
+    <!-- IMAGEN -->
+    <div class="imagen-panel">
+      <div class="product-silhouette" [ngStyle]="{'background-color': producto.color}"></div>
+    </div>
+ 
+    <!-- INFO -->
+    <div class="info-panel">
+ 
+      <div class="divider-top"></div>
+ 
+      <h1 class="product-title">{{ producto.name }}</h1>
+ 
+      <p class="tallas-label">Talla: {{ producto.tallas.join(', ') }}</p>
+      <p class="talla-seleccionada-label">Seleccionar talla:
+        <span class="talla-badge">{{ tallaSeleccionada }}</span>
+      </p>
+ 
+      <div class="tallas-selector">
+        <button
+          *ngFor="let t of producto.tallas"
+          class="talla-btn"
+          [class.active]="t === tallaSeleccionada"
+          (click)="seleccionarTalla(t)">
+          {{ t }}
+        </button>
+      </div>
+ 
+      <div class="cantidad-row">
+        <span class="cantidad-label">Cantidad: <strong>{{ cantidad }}</strong></span>
+        <div class="cantidad-controls">
+          <button class="ctrl-btn" (click)="aumentar()">+</button>
+          <span class="ctrl-sep">/</span>
+          <button class="ctrl-btn" (click)="disminuir()">-</button>
+        </div>
+      </div>
+ 
+      <p class="precio-label">Precio:
+        <strong>{{ precioFormateado }}</strong>
+      </p>
+ 
+      <div *ngIf="cantidad > 1" class="total-label">
+        Total: <strong>{{ totalFormateado }}</strong>
+      </div>
+ 
+      <hr class="divider" />
+ 
+      <p class="pago-titulo">Metodo de pago:</p>
+ 
+      <div class="pago-opciones">
+        <button
+          class="pago-btn"
+          [class.selected]="metodoPago === 'Crédito'"
+          (click)="seleccionarPago('Crédito')">Credito</button>
+        <button
+          class="pago-btn"
+          [class.selected]="metodoPago === 'Débito'"
+          (click)="seleccionarPago('Débito')">Debito</button>
+        <button
+          class="pago-btn"
+          [class.selected]="metodoPago === 'Efectivo'"
+          (click)="seleccionarPago('Efectivo')">Efectivo</button>
+      </div>
+ 
+      <button class="btn-finalizar" (click)="finalizar()">Finalizar Compra</button>
+ 
+    </div>
+  </div>
+</div>
+ 
+<ng-template #notFound>
+  <div class="not-found">
+    <p>Producto no encontrado.</p>
+    <button class="btn-volver" (click)="volver()">← Volver al catálogo</button>
+  </div>
+</ng-template>
+ 
+<!-- FOOTER -->
+<footer class="footer"></footer>
