@@ -1,0 +1,40 @@
+.login-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+  gap: 2rem;
+}
+
+.login-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 420px;
+  z-index: 1;
+}
+
+.deco-left, .deco-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.deco-img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  border: 3px solid black;
+  border-radius: 8px;
+  background: white;
+  padding: 8px;
+}
+
+.rotate-1 { transform: rotate(-15deg); }
+.rotate-2 { transform: rotate(-8deg); }
+.rotate-3 { transform: rotate(-12deg); }
+.rotate-4 { transform: rotate(12deg); }
+.rotate-5 { transform: rotate(8deg); }
+.rotate-6 { transform: rotate(15deg); }
