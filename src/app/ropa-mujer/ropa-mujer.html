@@ -1,138 +1,40 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ropa Mujer</title>
-  <link rel="stylesheet" href="ropa-mujer.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
-</head>
-<body>
- 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="navbar-logo">
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="16" cy="10" r="5" stroke="#1a1a1a" stroke-width="2" fill="none"/>
-        <path d="M8 10 Q6 14 8 28 H24 Q26 14 24 10" stroke="#1a1a1a" stroke-width="2" fill="none"/>
-        <path d="M8 10 Q12 16 16 14 Q20 16 24 10" stroke="#1a1a1a" stroke-width="2" fill="none"/>
-      </svg>
-    </div>
-    <ul class="navbar-links">
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#" class="active">Catálogo</a></li>
-      <li><a href="#">Carrito</a></li>
-    </ul>
-    <button class="btn-session">Iniciar sesión</button>
-  </nav>
- 
-  <!-- HEADER -->
-  <header class="page-header">
-    <h1>Página Ropa mujer</h1>
-  </header>
- 
-  <!-- PRODUCT GRID -->
-  <main class="container">
-    <div class="product-grid">
- 
-      <!-- Producto 1 -->
-      <div class="product-card">
+<header class="page-header">
+  <h1>Página Ropa mujer</h1>
+</header>
+
+<main class="container">
+  <div class="product-grid">
+
+    @for (item of ropaMujer; track item.id) {
+      <div class="product-card" (click)="verProducto(item.id)">
+
         <div class="product-image">
-          <div class="dress-preview dress-rose"></div>
+          <svg viewBox="0 0 160 180" xmlns="http://www.w3.org/2000/svg" class="dress-svg">
+            <!-- Cuerpo superior (blusa) -->
+            <path d="M48 38 Q80 50 112 38 L130 68 L108 75 L108 100 L52 100 L52 75 L30 68 Z"
+                  [attr.fill]="item.color" stroke="rgba(0,0,0,0.08)" stroke-width="1.5"/>
+            <!-- Cuello -->
+            <path d="M48 38 Q64 30 80 34 Q96 30 112 38 Q96 56 80 53 Q64 56 48 38 Z"
+                  [attr.fill]="item.color" stroke="rgba(0,0,0,0.12)" stroke-width="1"/>
+            <!-- Falda acampanada -->
+            <path d="M52 100 L108 100 L128 162 L32 162 Z"
+                  [attr.fill]="item.color" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+            <!-- Sombras mangas -->
+            <path d="M48 38 L30 68 L52 75 L52 55 Z" fill="rgba(0,0,0,0.08)"/>
+            <path d="M112 38 L130 68 L108 75 L108 55 Z" fill="rgba(0,0,0,0.08)"/>
+            <!-- Sombra lateral falda -->
+            <path d="M108 100 L128 162 L115 162 L98 100 Z" fill="rgba(0,0,0,0.06)"/>
+          </svg>
         </div>
+
         <div class="product-info">
-          <h3 class="product-name">Vestido rosa</h3>
-          <p class="product-sizes">Talla: XL, L, M, S</p>
-          <p class="product-price">Precio: 20.000</p>
+          <h3 class="product-name">{{ item.name }}</h3>
+          <p class="product-sizes">Talla: {{ item.tallas }}</p>
+          <p class="product-price">Precio: {{ item.precio }}</p>
         </div>
+
       </div>
- 
-      <!-- Producto 2 -->
-      <div class="product-card">
-        <div class="product-image">
-          <div class="dress-preview dress-black"></div>
-        </div>
-        <div class="product-info">
-          <h3 class="product-name">Vestido negro</h3>
-          <p class="product-sizes">Talla: XL, L, M, S</p>
-          <p class="product-price">Precio: 20.000</p>
-        </div>
-      </div>
- 
-      <!-- Producto 3 -->
-      <div class="product-card">
-        <div class="product-image">
-          <div class="dress-preview dress-cream"></div>
-        </div>
-        <div class="product-info">
-          <h3 class="product-name">Blusa crema</h3>
-          <p class="product-sizes">Talla: XL, L, M, S</p>
-          <p class="product-price">Precio: 20.000</p>
-        </div>
-      </div>
- 
-      <!-- Producto 4 -->
-      <div class="product-card">
-        <div class="product-image">
-          <div class="dress-preview dress-terracotta"></div>
-        </div>
-        <div class="product-info">
-          <h3 class="product-name">Blusa terracota</h3>
-          <p class="product-sizes">Talla: XL, L, M, S</p>
-          <p class="product-price">Precio: 20.000</p>
-        </div>
-      </div>
- 
-      <!-- Producto 5 -->
-      <div class="product-card">
-        <div class="product-image">
-          <div class="dress-preview dress-mint"></div>
-        </div>
-        <div class="product-info">
-          <h3 class="product-name">Vestido menta</h3>
-          <p class="product-sizes">Talla: XL, L, M, S</p>
-          <p class="product-price">Precio: 20.000</p>
-        </div>
-      </div>
- 
-      <!-- Producto 6 -->
-      <div class="product-card">
-        <div class="product-image">
-          <div class="dress-preview dress-lavender"></div>
-        </div>
-        <div class="product-info">
-          <h3 class="product-name">Blusa lavanda</h3>
-          <p class="product-sizes">Talla: XL, L, M, S</p>
-          <p class="product-price">Precio: 20.000</p>
-        </div>
-      </div>
- 
-      <!-- Producto 7 -->
-      <div class="product-card">
-        <div class="product-image">
-          <div class="dress-preview dress-camel"></div>
-        </div>
-        <div class="product-info">
-          <h3 class="product-name">Vestido camel</h3>
-          <p class="product-sizes">Talla: XL, L, M, S</p>
-          <p class="product-price">Precio: 20.000</p>
-        </div>
-      </div>
- 
-      <!-- Producto 8 -->
-      <div class="product-card">
-        <div class="product-image">
-          <div class="dress-preview dress-burgundy"></div>
-        </div>
-        <div class="product-info">
-          <h3 class="product-name">Blusa borgoña</h3>
-          <p class="product-sizes">Talla: XL, L, M, S</p>
-          <p class="product-price">Precio: 20.000</p>
-        </div>
-      </div>
- 
-    </div>
-  </main>
- 
-</body>
-</html>
+    }
+
+  </div>
+</main>
