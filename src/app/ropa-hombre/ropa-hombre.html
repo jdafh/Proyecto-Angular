@@ -1,138 +1,38 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Camisas Hombre</title>
-  <link rel="stylesheet" href="ropa-hombre.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
-</head>
-<body>
- 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="navbar-logo">
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="16" cy="10" r="5" stroke="#1a1a1a" stroke-width="2" fill="none"/>
-        <path d="M8 10 Q6 14 8 28 H24 Q26 14 24 10" stroke="#1a1a1a" stroke-width="2" fill="none"/>
-        <path d="M8 10 Q12 16 16 14 Q20 16 24 10" stroke="#1a1a1a" stroke-width="2" fill="none"/>
-      </svg>
-    </div>
-    <ul class="navbar-links">
-      <li><a href="#">Inicio</a></li>
-      <li><a href="#" class="active">Catálogo</a></li>
-      <li><a href="#">Carrito</a></li>
-    </ul>
-    <button class="btn-session">Iniciar sesión</button>
-  </nav>
- 
-  <!-- HEADER -->
-  <header class="page-header">
-    <h1>Página Camisas hombre</h1>
-  </header>
- 
-  <!-- PRODUCT GRID -->
-  <main class="container">
-    <div class="product-grid">
- 
-      <!-- Producto 1 -->
-      <div class="product-card">
+<header class="page-header">
+  <h1>Página Camisas hombre</h1>
+</header>
+
+<main class="container">
+  <div class="product-grid">
+
+    @for (item of RopaHombre; track item.id) {
+      <div class="product-card" (click)="verProducto(item.id)">
+
         <div class="product-image">
-          <div class="shirt-preview shirt-black"></div>
+          <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" class="shirt-svg">
+            <!-- Cuerpo -->
+            <path d="M45 35 Q80 48 115 35 L138 70 L112 78 L112 138 L48 138 L48 78 L22 70 Z"
+                  [attr.fill]="item.color" stroke="rgba(0,0,0,0.08)" stroke-width="1.5"/>
+            <!-- Cuello -->
+            <path d="M45 35 Q62 28 80 32 Q98 28 115 35 Q98 55 80 52 Q62 55 45 35 Z"
+                  [attr.fill]="item.color" stroke="rgba(0,0,0,0.12)" stroke-width="1"/>
+            <!-- Sombra manga izquierda -->
+            <path d="M45 35 L22 70 L48 78 L48 55 Z" fill="rgba(0,0,0,0.08)"/>
+            <!-- Sombra manga derecha -->
+            <path d="M115 35 L138 70 L112 78 L112 55 Z" fill="rgba(0,0,0,0.08)"/>
+            <!-- Sombra cuerpo lateral -->
+            <path d="M112 78 L112 138 L100 138 L100 78 Z" fill="rgba(0,0,0,0.06)"/>
+          </svg>
         </div>
+
         <div class="product-info">
-          <h3 class="product-name">Camisa negra</h3>
-          <p class="product-sizes">Talla: XL, L, M, S</p>
-          <p class="product-price">Precio: 20.000</p>
+          <h3 class="product-name">{{ item.name }}</h3>
+          <p class="product-sizes">Talla: {{ item.tallas }}</p>
+          <p class="product-price">Precio: {{ item.precio }}</p>
         </div>
+
       </div>
- 
-      <!-- Producto 2 -->
-      <div class="product-card">
-        <div class="product-image">
-          <div class="shirt-preview shirt-black-over"></div>
-        </div>
-        <div class="product-info">
-          <h3 class="product-name">Camisa oversize negra</h3>
-          <p class="product-sizes">Talla: XL, L, M, S</p>
-          <p class="product-price">Precio: 20.000</p>
-        </div>
-      </div>
- 
-      <!-- Producto 3 -->
-      <div class="product-card">
-        <div class="product-image">
-          <div class="shirt-preview shirt-white"></div>
-        </div>
-        <div class="product-info">
-          <h3 class="product-name">Camisa blanca</h3>
-          <p class="product-sizes">Talla: XL, L, M, S</p>
-          <p class="product-price">Precio: 20.000</p>
-        </div>
-      </div>
- 
-      <!-- Producto 4 -->
-      <div class="product-card">
-        <div class="product-image">
-          <div class="shirt-preview shirt-yellow"></div>
-        </div>
-        <div class="product-info">
-          <h3 class="product-name">Camisa oversize amarilla</h3>
-          <p class="product-sizes">Talla: XL, L, M, S</p>
-          <p class="product-price">Precio: 20.000</p>
-        </div>
-      </div>
- 
-      <!-- Producto 5 -->
-      <div class="product-card">
-        <div class="product-image">
-          <div class="shirt-preview shirt-green"></div>
-        </div>
-        <div class="product-info">
-          <h3 class="product-name">Camisa verde</h3>
-          <p class="product-sizes">Talla: XL, L, M, S</p>
-          <p class="product-price">Precio: 20.000</p>
-        </div>
-      </div>
- 
-      <!-- Producto 6 -->
-      <div class="product-card">
-        <div class="product-image">
-          <div class="shirt-preview shirt-brown"></div>
-        </div>
-        <div class="product-info">
-          <h3 class="product-name">Camisa oversize cafe</h3>
-          <p class="product-sizes">Talla: XL, L, M, S</p>
-          <p class="product-price">Precio: 20.000</p>
-        </div>
-      </div>
- 
-      <!-- Producto 7 -->
-      <div class="product-card">
-        <div class="product-image">
-          <div class="shirt-preview shirt-blue"></div>
-        </div>
-        <div class="product-info">
-          <h3 class="product-name">Camisa azul</h3>
-          <p class="product-sizes">Talla: XL, L, M, S</p>
-          <p class="product-price">Precio: 20.000</p>
-        </div>
-      </div>
- 
-      <!-- Producto 8 -->
-      <div class="product-card">
-        <div class="product-image">
-          <div class="shirt-preview shirt-gray"></div>
-        </div>
-        <div class="product-info">
-          <h3 class="product-name">Camisa oversize gris</h3>
-          <p class="product-sizes">Talla: XL, L, M, S</p>
-          <p class="product-price">Precio: 20.000</p>
-        </div>
-      </div>
- 
-    </div>
-  </main>
- 
-</body>
-</html>
+    }
+
+  </div>
+</main>
