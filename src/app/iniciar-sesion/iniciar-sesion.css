@@ -26,7 +26,7 @@
   width: 140px;
   height: 140px;
   object-fit: contain;
-  border: 3px solid black;
+  border: 3px solid hwb(486284);
   border-radius: 8px;
   background: white;
   padding: 8px;

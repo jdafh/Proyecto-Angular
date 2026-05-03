@@ -3,9 +3,31 @@ nav {
 }
 
 .nav-link {
-  color: #000000 !important;
+  color: #486284 !important;
 }
 
 .navbar-brand {
-  color: #000000 !important;
+  color: #486284 !important;
+}
+
+.btn-sesion {
+  background-color: #486284;
+  color: white;
+  border: none;
+}
+
+.btn-sesion:hover {
+  background-color: #3a5270;
+  color: white;
+}
+
+.navbar-nav {
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
 }
