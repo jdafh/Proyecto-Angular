@@ -5,6 +5,7 @@ import { RopaMujer } from './ropa-mujer/ropa-mujer';
 import { Navbar } from './navbar/navbar';
 import { ProductoDetalle } from './producto-detalle/producto-detalle';
 import { Catalogo } from './catalogo/catalogo';
+import { IniciarSesion} from './iniciar-sesion/iniciar-sesion';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -14,5 +15,6 @@ export const routes: Routes = [
   { path: 'home', component: Home },
   { path: 'navbar', component: Navbar },
   { path: 'producto/:id', component: ProductoDetalle },
+  { path: 'iniciar-sesion', component: IniciarSesion },
   { path: '**', redirectTo: '' }
 ];
