@@ -1,25 +1,40 @@
-<h2 class="mb-4">👗 Ropa para mujer</h2>
+<header class="page-header">
+  <h1>Página Ropa mujer</h1>
+</header>
 
-<div class="container">
-  <div class="row row-cols-1 row-cols-md-3 g-4">
+<main class="container">
+  <div class="product-grid">
 
     @for (item of ropaMujer; track item.id) {
-      <div class="col">
-        <div class="card h-100 shadow-sm">
+      <div class="product-card" (click)="verProducto(item.id)">
 
-          <div class="card-body text-center">
-            <h5 class="card-title">{{ item.name }}</h5>
-          </div>
-
-          <div class="card-footer">
-            <button class="btn btn-outline-primary w-100">
-              Ver producto
-            </button>
-          </div>
-
+        <div class="product-image">
+          <svg viewBox="0 0 160 180" xmlns="http://www.w3.org/2000/svg" class="dress-svg">
+            <!-- Cuerpo superior (blusa) -->
+            <path d="M48 38 Q80 50 112 38 L130 68 L108 75 L108 100 L52 100 L52 75 L30 68 Z"
+                  [attr.fill]="item.color" stroke="rgba(0,0,0,0.08)" stroke-width="1.5"/>
+            <!-- Cuello -->
+            <path d="M48 38 Q64 30 80 34 Q96 30 112 38 Q96 56 80 53 Q64 56 48 38 Z"
+                  [attr.fill]="item.color" stroke="rgba(0,0,0,0.12)" stroke-width="1"/>
+            <!-- Falda acampanada -->
+            <path d="M52 100 L108 100 L128 162 L32 162 Z"
+                  [attr.fill]="item.color" stroke="rgba(0,0,0,0.06)" stroke-width="1"/>
+            <!-- Sombras mangas -->
+            <path d="M48 38 L30 68 L52 75 L52 55 Z" fill="rgba(0,0,0,0.08)"/>
+            <path d="M112 38 L130 68 L108 75 L108 55 Z" fill="rgba(0,0,0,0.08)"/>
+            <!-- Sombra lateral falda -->
+            <path d="M108 100 L128 162 L115 162 L98 100 Z" fill="rgba(0,0,0,0.06)"/>
+          </svg>
         </div>
+
+        <div class="product-info">
+          <h3 class="product-name">{{ item.name }}</h3>
+          <p class="product-sizes">Talla: {{ item.tallas }}</p>
+          <p class="product-price">Precio: {{ item.precio }}</p>
+        </div>
+
       </div>
     }
 
   </div>
-</div>
+</main>

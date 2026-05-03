@@ -25,4 +25,8 @@ export class RopaHombre {
   verProducto(id: number) {
     this.router.navigate(['/producto', id]);
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 66025d5f77d830d020bad7a11c03a1b3e997eb80
