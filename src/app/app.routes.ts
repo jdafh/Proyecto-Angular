@@ -7,6 +7,7 @@ import { ProductoDetalle } from './producto-detalle/producto-detalle';
 import { Catalogo } from './catalogo/catalogo';
 import { IniciarSesion} from './iniciar-sesion/iniciar-sesion';
 import { CrearCuenta } from './crear-cuenta/crear-cuenta';
+import { Carrito } from './carrito/carrito'; 
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -18,5 +19,6 @@ export const routes: Routes = [
   { path: 'producto/:id', component: ProductoDetalle },
   { path: 'iniciar-sesion', component: IniciarSesion },
   { path: 'crear-cuenta', component: CrearCuenta },
+  { path: 'carrito', component: Carrito },
   { path: '**', redirectTo: '' }
 ];
