@@ -9,6 +9,7 @@ import { IniciarSesion} from './iniciar-sesion/iniciar-sesion';
 import { CrearCuenta } from './crear-cuenta/crear-cuenta';
 import { Carrito } from './carrito/carrito'; 
 import { Ofertas } from './ofertas/ofertas';
+import { Devoluciones } from './devoluciones/devoluciones';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -22,5 +23,6 @@ export const routes: Routes = [
   { path: 'crear-cuenta', component: CrearCuenta },
   { path: 'carrito', component: Carrito },
   { path: 'ofertas', component: Ofertas },
+  { path: 'devoluciones', component: Devoluciones },
   { path: '**', redirectTo: '' }
 ];
