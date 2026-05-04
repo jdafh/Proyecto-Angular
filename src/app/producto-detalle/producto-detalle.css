@@ -16,48 +16,13 @@ body {
   min-height: 100vh;
 }
  
-/* ---- NAVBAR ---- */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #ffffff;
-  padding: 12px 40px;
-  border-bottom: 1px solid #e8e0dc;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
+
  
-.navbar-links {
-  display: flex;
-  list-style: none;
-  gap: 36px;
-}
+
  
-.navbar-links a {
-  text-decoration: none;
-  font-size: 14px;
-  color: #444;
-  position: relative;
-  transition: color 0.2s;
-}
+
  
-.navbar-links a.active,
-.navbar-links a:hover { color: #1a1a1a; }
- 
-.navbar-links a::after {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 0;
-  height: 1.5px;
-  background: #1a1a1a;
-  transition: width 0.25s;
-}
-.navbar-links a.active::after,
-.navbar-links a:hover::after { width: 100%; }
+
  
 .btn-session {
   background-color: #1a1a1a;

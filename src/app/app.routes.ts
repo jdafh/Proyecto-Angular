@@ -10,6 +10,8 @@ import { CrearCuenta } from './crear-cuenta/crear-cuenta';
 import { Carrito } from './carrito/carrito'; 
 import { Ofertas } from './ofertas/ofertas';
 import { Devoluciones } from './devoluciones/devoluciones';
+import { Comentarios } from './comentarios/comentarios';
+import { Comentar } from './comentar/comentar';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -24,5 +26,7 @@ export const routes: Routes = [
   { path: 'carrito', component: Carrito },
   { path: 'ofertas', component: Ofertas },
   { path: 'devoluciones', component: Devoluciones },
+  { path: 'comentarios', component: Comentarios },
+  { path: 'comentar', component: Comentar },
   { path: '**', redirectTo: '' }
 ];
