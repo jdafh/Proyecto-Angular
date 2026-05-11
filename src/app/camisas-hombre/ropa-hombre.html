@@ -1,38 +1,94 @@
-<header class="page-header">
-  <h1>Página Camisas hombre</h1>
-</header>
+<div class="container py-4" style="background-color: #fdf0f0; min-height: 100vh;">
+  <div class="row">
 
-<main class="container">
-  <div class="product-grid">
+    <!-- Columna izquierda -->
+    <div class="col-6">
 
-    @for (item of RopaHombre; track item.id) {
-      <div class="product-card" (click)="verProducto(item.id)">
-
-        <div class="product-image">
-          <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" class="shirt-svg">
-            <!-- Cuerpo -->
-            <path d="M45 35 Q80 48 115 35 L138 70 L112 78 L112 138 L48 138 L48 78 L22 70 Z"
-                  [attr.fill]="item.color" stroke="rgba(0,0,0,0.08)" stroke-width="1.5"/>
-            <!-- Cuello -->
-            <path d="M45 35 Q62 28 80 32 Q98 28 115 35 Q98 55 80 52 Q62 55 45 35 Z"
-                  [attr.fill]="item.color" stroke="rgba(0,0,0,0.12)" stroke-width="1"/>
-            <!-- Sombra manga izquierda -->
-            <path d="M45 35 L22 70 L48 78 L48 55 Z" fill="rgba(0,0,0,0.08)"/>
-            <!-- Sombra manga derecha -->
-            <path d="M115 35 L138 70 L112 78 L112 55 Z" fill="rgba(0,0,0,0.08)"/>
-            <!-- Sombra cuerpo lateral -->
-            <path d="M112 78 L112 138 L100 138 L100 78 Z" fill="rgba(0,0,0,0.06)"/>
-          </svg>
+      <!-- Camisa negra -->
+      <div class="d-flex align-items-center gap-3 mb-4">
+        <img src="assets/Camisas1.png" style="width: 80px; height: 80px; object-fit: contain;" />
+        <div>
+          <p class="fw-bold mb-0">Camisa azul manga larga</p>
+          <p class="mb-0">Talla: XL , L , M , S</p>
+          <p class="mb-0">Precio: 20.000</p>
         </div>
-
-        <div class="product-info">
-          <h3 class="product-name">{{ item.name }}</h3>
-          <p class="product-sizes">Talla: {{ item.tallas }}</p>
-          <p class="product-price">Precio: {{ item.precio }}</p>
-        </div>
-
       </div>
-    }
 
+      <!-- Camisa blanca -->
+      <div class="d-flex align-items-center gap-3 mb-4">
+        <img src="assets/Camisas2.png" style="width: 80px; height: 80px; object-fit: contain;" />
+        <div>
+          <p class="fw-bold mb-0">Camisa manga corta</p>
+          <p class="mb-0">Talla: XL , L , M , S</p>
+          <p class="mb-0">Precio: 20.000</p>
+        </div>
+      </div>
+
+      <!-- Camisa verde -->
+      <div class="d-flex align-items-center gap-3 mb-4">
+        <img src="assets/Camisas3.png" style="width: 80px; height: 80px; object-fit: contain;" />
+        <div>
+          <p class="fw-bold mb-0">Camisa azul</p>
+          <p class="mb-0">Talla: XL , L , M , S</p>
+          <p class="mb-0">Precio: 20.000</p>
+        </div>
+      </div>
+
+      <!-- Camisa azul -->
+      <div class="d-flex align-items-center gap-3 mb-4">
+        <img src="assets/Camisas4.png" style="width: 80px; height: 80px; object-fit: contain;" />
+        <div>
+          <p class="fw-bold mb-0">Camisa negra</p>
+          <p class="mb-0">Talla: XL , L , M , S</p>
+          <p class="mb-0">Precio: 20.000</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Columna derecha -->
+    <div class="col-6">
+
+      <!-- Camisa oversize negra -->
+      <div class="d-flex align-items-center justify-content-end gap-3 mb-4">
+        <div class="text-end">
+          <p class="fw-bold mb-0">Camisa polo</p>
+          <p class="mb-0">Talla: XL , L , M , S</p>
+          <p class="mb-0">Precio: 20.000</p>
+        </div>
+        <img src="assets/Camisas5.png" style="width: 80px; height: 80px; object-fit: contain;" />
+      </div>
+
+      <!-- Camisa oversize amarilla -->
+      <div class="d-flex align-items-center justify-content-end gap-3 mb-4">
+        <div class="text-end">
+          <p class="fw-bold mb-0">Camisa cuello tortuga</p>
+          <p class="mb-0">Talla: XL , L , M , S</p>
+          <p class="mb-0">Precio: 20.000</p>
+        </div>
+        <img src="assets/Camisas6.png" style="width: 80px; height: 80px; object-fit: contain;" />
+      </div>
+
+      <!-- Camisa oversize cafe -->
+      <div class="d-flex align-items-center justify-content-end gap-3 mb-4">
+        <div class="text-end">
+          <p class="fw-bold mb-0">Camisa playera estampada</p>
+          <p class="mb-0">Talla: XL , L , M , S</p>
+          <p class="mb-0">Precio: 20.000</p>
+        </div>
+        <img src="assets/Camisas7.png" style="width: 80px; height: 80px; object-fit: contain;" />
+      </div>
+
+      <!-- Camisa oversize gris -->
+      <div class="d-flex align-items-center justify-content-end gap-3 mb-4">
+        <div class="text-end">
+          <p class="fw-bold mb-0">Camisa azul estampado</p>
+          <p class="mb-0">Talla: XL , L , M , S</p>
+          <p class="mb-0">Precio: 20.000</p>
+        </div>
+        <img src="assets/Camisas8.png" style="width: 80px; height: 80px; object-fit: contain;" />
+      </div>
+
+    </div>
   </div>
-</main>
+</div>

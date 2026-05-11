@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { Home } from './home/home';
-import { RopaHombre } from './camisas-hombre/ropa-hombre';
+import { CamisasHombre } from './camisas-hombre/ropa-hombre';
 import { RopaMujer } from './camisas-mujer/ropa-mujer';
 import { Navbar } from './navbar/navbar';
 import { ProductoDetalle } from './producto-detalle/producto-detalle';
@@ -16,7 +16,7 @@ import { Comentar } from './comentar/comentar';
 
 export const routes: Routes = [
   { path: '', component: Home },
-  { path: 'camisas-hombre', component: RopaHombre },
+  { path: 'camisas-hombre', component: CamisasHombre },
   { path: 'camisas-mujer', component: RopaMujer },
   { path: 'catalogo', component: Catalogo },
   { path: 'home', component: Home },
