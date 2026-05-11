@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { Home } from './home/home';
-import { RopaHombre } from './ropa-hombre/ropa-hombre';
-import { RopaMujer } from './ropa-mujer/ropa-mujer';
+import { RopaHombre } from './camisas-hombre/ropa-hombre';
+import { RopaMujer } from './camisas-mujer/ropa-mujer';
 import { Navbar } from './navbar/navbar';
 import { ProductoDetalle } from './producto-detalle/producto-detalle';
 import { Catalogo } from './catalogo/catalogo';
@@ -13,10 +13,11 @@ import { Devoluciones } from './devoluciones/devoluciones';
 import { Comentarios } from './comentarios/comentarios';
 import { Comentar } from './comentar/comentar';
 
+
 export const routes: Routes = [
   { path: '', component: Home },
-  { path: 'ropa-hombre', component: RopaHombre },
-  { path: 'ropa-mujer', component: RopaMujer },
+  { path: 'camisas-hombre', component: RopaHombre },
+  { path: 'camisas-mujer', component: RopaMujer },
   { path: 'catalogo', component: Catalogo },
   { path: 'home', component: Home },
   { path: 'navbar', component: Navbar },
