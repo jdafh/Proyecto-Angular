@@ -12,6 +12,7 @@ import { Ofertas } from './ofertas/ofertas';
 import { Devoluciones } from './devoluciones/devoluciones';
 import { Comentarios } from './comentarios/comentarios';
 import { Comentar } from './comentar/comentar';
+import { CamisasHombreDetail } from './camisas-hombre-detail/camisas-hombre-detail';
 
 
 export const routes: Routes = [
@@ -29,5 +30,6 @@ export const routes: Routes = [
   { path: 'devoluciones', component: Devoluciones },
   { path: 'comentarios', component: Comentarios },
   { path: 'comentar', component: Comentar },
+  { path: 'camisas-hombre/:id', component: CamisasHombreDetail },
   { path: '**', redirectTo: '' }
 ];
